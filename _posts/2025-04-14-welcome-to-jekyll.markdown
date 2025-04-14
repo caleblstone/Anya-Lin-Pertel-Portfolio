@@ -1,29 +1,10 @@
 ---
-layout: post
-title:  "Welcome to Jekyll!"
-date:   2025-04-14 12:26:34 +0100
-categories: jekyll update
+layout: default
+title:  "untitled #1"
+year: "2025"
+categories: "2025"
+dimensions: " 20 x 20 in."
+medium: "Oil on canvas"
+images: "https://format.creatorcdn.com/c47cde98-f401-4f64-a5c9-ddfa2a95e13a/0/0/0/0,0,2508,3302,1200,3302/0-0-0/f3891091-2b50-4d1a-b590-c8aa1f943fe6/1/1/IMG_2164.jpg?fjkss=exp=2060170374~hmac=d640a7331d3e2fafdaec4882e44be71b9c50e4fe806fe960b86c651c3b8a3ed0&1200"
+order: "1"
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-Jekyll requires blog post files to be named according to the following format:
-
-`YEAR-MONTH-DAY-title.MARKUP`
-
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/

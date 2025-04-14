@@ -1,0 +1,30 @@
+<div id="navigation">
+    <div id="Title">
+        <a href="/"><h1>Anya Lin Pertel</h1></a>
+    </div>
+    
+    <div id="nav_links">
+        <nav>
+            <nav id="work-nav" onclick="toggleWork()">Work</nav>
+            
+            <ul id="work-list" style="display: none;">
+                {% for category in site.categories %}
+                    <li>
+                        <a href="#{{ category[0] }}">{{ category[0] }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <nav><a href="/about/index.html">About</a></nav>
+        <nav><a href="">Instagram</a></nav>
+        <nav><a href="">Email</a></nav>
+    </div>
+</div>
+
+<script>
+    function toggleWork() {
+        const workList = document.getElementById('work-list');
+        const isHidden = workList.style.display === 'none';
+        workList.style.display = isHidden ? 'block' : 'none';
+    }
+</script>

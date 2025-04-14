@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+
+media_library:
+  name: uploadcare
+  config:
+    publicKey: fbb66349001efbc7e5ce
+    multiple: true
+  settings:
+    defaultOperations: '/resize/2400/-/quality/lightest/-/format/auto/'
+
+collections:
+  - name: "work"
+    label: "Work" 
+    folder: "_posts/work"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "string", default: "individual_work_layout" }
+      - { label: "Categories", name: "categories", widget: "string", default: "work" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Production Date", name: "production_date", widget: "string" }
+      - { label: "Materials", name: "materials", widget: "string" }
+      - { label: "Dimensions", name: "dimensions", widget: "string", required: false }
+      - { label: "Images", name: "images", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  - name: "about"
+    label: "About" 
+    folder: "_posts/about"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "string", default: "post" }
+      - { label: "Categories", name: "categories", widget: "string", default: "question" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

@@ -1,0 +1,19 @@
+{% for category in site.categories %}
+  <div class="work_box" id="_{{ category[0] }}">
+    {% for post in category[1] %}
+      <div class="work">
+        <div class="work_text">
+          <div class="description_text"><em>{{ post.title }}</em></div>
+          <div class="description_text">{{ post.year }}</div>
+          <div class="description_text">{{ post.medium }}</div>
+          <div class="description_text">{{ post.dimensions }}</div>
+        </div>
+        <div class="image_container">
+          <img src="{{ post.images }}" alt="">
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}
+
+
