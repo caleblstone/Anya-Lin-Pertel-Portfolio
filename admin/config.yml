@@ -15,12 +15,12 @@ media_library:
 collections:
   - name: "work"
     label: "Work" 
-    folder: "_posts/work"
+    folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Layout", name: "layout", widget: "string", default: "individual_work_layout" }
-      - { label: "Categories", name: "categories", widget: "string", default: "work" }
+      - { label: "Categories", name: "categories", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Production Date", name: "production_date", widget: "string" }
       - { label: "Materials", name: "materials", widget: "string" }
