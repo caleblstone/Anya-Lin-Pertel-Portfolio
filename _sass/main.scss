@@ -1,39 +1,42 @@
-body{
-        display: grid;
-        grid-template-columns: auto 1fr; 
-        margin: 0px;
+body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+        color: green; 
+    }
 }
 
-h1{
+h1 {
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-size: 24px;
     font-weight: 400;
     font-style: normal;
-    margin: 0px;
+    margin: 0;
 }
 
-#navigation{
+#navigation {
     margin: 16px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    height: min-content;  
-    
-    #work-nav:hover{
+    height: min-content;
+
+    #work-nav:hover {
         color: green;
         cursor: pointer;
-
     }
 
-    li{
+    li {
         list-style: none;
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
         font-family: "neue-haas-grotesk-display", sans-serif;
         font-size: 16px;
         font-weight: 400;
@@ -41,24 +44,21 @@ h1{
         margin-top: 8px;
     }
 
-    #about{
+    #about {
         display: none;
     }
 
-    li:hover{
+    li:hover {
         color: green;
         cursor: pointer;
     }
-    
 
-    div{
+    div {
         display: grid;
         grid-template-columns: 1fr;
     }
 
-  
-
-    nav{
+    nav {
         margin-top: 8px;
         font-family: "neue-haas-grotesk-display", sans-serif;
         font-size: 16px;
@@ -66,11 +66,9 @@ h1{
         font-style: normal;
         height: min-content;
     }
-    
-   
 }
 
-.work_box{
+.work_box {
     display: grid;
     grid-template-columns: auto;
     justify-items: center;
@@ -78,7 +76,7 @@ h1{
     overflow-y: scroll;
 }
 
-div.work{
+div.work {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: left;
@@ -86,54 +84,43 @@ div.work{
     margin-bottom: 16px;
     height: min-content;
 
-
-    
-    div.image_container{
+    div.image_container {
         width: 60vw;
         max-height: 80vh;
-        display: flex; 
+        display: flex;
         justify-content: left;
         align-items: center;
         overflow: hidden;
-        
     }
-    img{
-        max-width: 100%; 
-        max-height: 100%; 
-        object-fit: contain; 
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
         display: block;
     }
-    
 
-    div.work_text{
+    div.work_text {
         display: grid;
         grid-template-columns: 1fr;
         align-content: end;
         margin-right: 8px;
 
-        div.description_text{
+        div.description_text {
             width: 100%;
             font-family: 'Times New Roman', Times, serif;
             font-size: 16px;
             font-weight: 400;
-            margin: 0px;
-            // margin-top: 4px;
-            
+            margin: 0;
             text-align: right;
-            
         }
-
     }
-
-   
 }
 
-#abouttext{
+#abouttext {
     display: flex;
-    
-    
 
-    #about_text{
+    #about_text {
         margin-left: auto;
         padding-right: 16px;
         width: 30vw;
@@ -141,168 +128,359 @@ div.work{
         min-width: 400px;
         max-width: 700px;
 
-        img{
+        img {
             width: 100%;
             max-width: 100%;
             max-height: 100%;
             margin-top: 16px;
-        };
+        }
 
-        #credit{
+        #credit {
             position: absolute;
             bottom: 16px;
             right: 16px;
             font-size: 16px;
 
-            a{
-                text-decoration: underline
-            };
+            a {
+                text-decoration: underline;
+
+                &:hover {
+                    color: green; 
+                }
+            }
         }
     }
+
     font-size: 24px;
-    
-    p{
-        margin: 0px;
+
+    p {
+        margin: 0;
         margin-top: 16px;
+    }
+
+    p.mobileContact{
+        display: none;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     body {
         display: grid;
-        grid-template-columns: 1fr; /* Single column grid */
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+    }
+
+   #abouttext p.mobileContact{
+        display: block;
+        text-decoration: underline;
     }
 
     div.work_box {
-        width: 100%; /* Ensure the work_box spans the full width */
+        height: auto;
+        overflow-y: visible;
     }
 
     div.work {
-        display: flex; /* Use flexbox for easier child ordering */
-        flex-direction: column-reverse; /* Reverse the order of children */
-        width: 100%; /* Ensure div.work spans the full width */
-        margin: 8px 0; /* Remove side margins to allow full-width children */
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin: 8px 0;
         height: min-content;
         align-items: center;
     }
 
     div.work div.image_container {
-        width: calc(100% - 16px); /* Full width with 16px margins */
-        margin: 0 auto; /* Center the container */
+        width: calc(100% - 16px);
+        margin: 0 auto;
         display: flex;
         justify-content: center;
     }
 
     div.work div.image_container img {
-        width: 100%; /* Full width */
-        height: auto; /* Maintain aspect ratio */
+        height: 100%; 
+        width: auto; 
+        max-height: 80vh; 
         display: block;
     }
 
-    
-        #navigation {
-            position: sticky; /* Make it sticky */
-            top: 0; /* Stick to the top of the page */
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Two-column grid */
-            align-items: center; /* Vertically center content */
-            background-color: white; /* Optional: Add a background color */
-            z-index: 1000; /* Ensure it stays above other elements */
-            padding: 8px;
-            margin: 0px;
-           
+    div.work div.work_text {
+        text-align: center; 
+        align-content: center;
+    }
+
+    div.work div.work_text div.description_text {
+        text-align: center; 
+        width: 100%;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    #navigation {
+        position: sticky;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        background-color: white;
+        z-index: 1000;
+        padding: 8px;
+        margin: 0;
+    }
+
+    #Title h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    #Title {
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    #navigation #nav_links {
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-auto-flow: column;
+        justify-content: end;
+        align-items: center;
+        gap: 16px;
+    }
+
+    #navigation #nav_links nav {
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #instagram,
+    #email {
+        display: none;
+    }
+
+    #work-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        display: none;
+        z-index: 1000;
+        margin: 0;
+    }
+
+    #work-list li {
+        text-align: left;
+        padding: 8px 16px;
+    }
+
+    #work-list li a {
+        font-size: 16px;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: green;
         }
-    
-        #Title h1 {
-            font-size: 16px; /* Shrink font size to a multiple of 8 */
-            margin: 0; /* Remove default margin */
+    }
+
+    #abouttext {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 16px;
+        padding: 0;
+    }
+
+    #abouttext #about_text {
+        width: 60%;
+        text-align: right;
+        min-width: unset;
+        max-width: unset;
+        margin: 0;
+    }
+
+    #abouttext #about_text img {
+        width: 100%; 
+        height: auto; 
+        max-height: 80vh; 
+        margin-top: 16px;
+    }
+
+    #abouttext #about_text #credit {
+        position: static;
+        margin-top: 16px;
+        font-size: 16px;
+        text-align: right;
+    }
+
+    #abouttext p {
+        margin: 0;
+        margin-top: 16px;
+        text-align: right;
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+    }
+   
+    #abouttext p.mobileContact{
+        display: block;
+        text-decoration: underline;
+    }
+
+    div.work_box {
+        height: auto;
+        overflow-y: visible;
+    }
+
+    div.work {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin: 8px 0;
+        height: min-content;
+        align-items: center;
+    }
+
+    div.work div.image_container {
+        width: calc(100% - 16px);
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    div.work div.image_container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+  div.work div.work_text {
+        text-align: center; 
+        align-content: center;
+    }
+
+    div.work div.work_text div.description_text {
+        text-align: center; 
+        width: 100%;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    #navigation {
+        position: sticky;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        background-color: white;
+        z-index: 1000;
+        padding: 8px;
+        margin: 0;
+    }
+
+    #Title h1 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    #Title {
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    #navigation #nav_links {
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-auto-flow: column;
+        justify-content: end;
+        align-items: center;
+        gap: 16px;
+    }
+
+    #navigation #nav_links nav {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #instagram,
+    #email {
+        display: none;
+    }
+
+    #work-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white; 
+        display: none;
+        z-index: 1000;
+        margin: 0;
+    }
+
+    #work-list li {
+        text-align: left;
+        padding: 8px 16px;
+    }
+
+    #work-list li a {
+        font-size: 16px;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: green; 
         }
-    
-        #Title {
-            grid-column: 1; /* Place in the first column */
-            justify-self: start; /* Align to the left */
-        }
-    
-        #navigation #nav_links {
-            grid-column: 2; /* Place in the second column */
-            display: grid; /* Use CSS Grid */
-            grid-template-columns: auto auto; /* Two-column grid */
-            grid-auto-flow: column; /* Ensure items flow horizontally */
-            justify-content: end; /* Align items to the right */
-            align-items: center; /* Vertically center the <nav> tags */
-            gap: 16px; /* Add spacing between links */
-        }
-    
-        #navigation #nav_links nav {
-            font-size: 16px; /* Adjust font size for smaller screens */
-            margin: 0; /* Remove any default margins */
-            padding: 0; /* Remove any default padding */
-        }
-    
-        #instagram,
-        #email {
-            display: none; /* Hide Instagram and Email links */
-        }
-    
-        #work-list {
-            position: absolute; /* Ensure dropdown doesn't affect layout */
-            top: 100%; /* Position below the navigation */
-            left: 0;
-            right: 0;
-            background-color: rgba(255, 255, 255, 0.8); /* Match navigation background */
-            backdrop-filter: blur(8px);
-            display: none; /* Keep it hidden by default */
-            z-index: 1000; /* Ensure it stays above other elements */
-            margin: 0px;
-        
-        }
-    
-        #work-list li {
-            text-align: left; /* Align dropdown items to the left */
-            padding: 8px 16px; /* Add padding for better spacing */
-        }
-    
-        #work-list li a {
-            font-size: 16px; /* Adjust font size for smaller screens */
-            text-decoration: none; /* Remove underline */
-            color: black; /* Set link color */
-        }
-        /* Mobile-friendly #abouttext */
-        #abouttext {
-            display: flex;
-            flex-direction: column; /* Stack children vertically */
-            align-items: flex-end; /* Right-align content */
-            font-size: 16px; /* Set font size to 16px */
-            padding: 0px; /* Add padding for spacing */
-        }
-    
-        #abouttext #about_text {
-            width: 90%; /* Make it take up most of the screen width */
-            text-align: right; /* Right-align text */
-            min-width: unset; /* Remove minimum width */
-            max-width: unset; /* Remove maximum width */
-            margin: 0; /* Remove auto-centering */
-        }
-    
-        #abouttext #about_text img {
-            width: 100%; /* Full width */
-            max-width: 100%; /* Ensure it doesn't exceed the container */
-            height: auto; /* Maintain aspect ratio */
-            margin-top: 16px; /* Add spacing above the image */
-        }
-    
-        #abouttext #about_text #credit {
-            position: static; /* Remove absolute positioning */
-            margin-top: 16px; /* Add spacing above the credit */
-            font-size: 16px; /* Set font size to 16px */
-            text-align: right; /* Right-align the credit */
-        }
-    
-        #abouttext p {
-            margin: 0;
-            margin-top: 16px;
-            text-align: right; /* Right-align paragraphs */
-            font-size: 24px;
-        }
-    
+    }
+
+    #abouttext {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 16px;
+        padding: 0;
+    }
+
+    #abouttext #about_text {
+        width: 90%;
+        text-align: right;
+        min-width: unset;
+        max-width: unset;
+        margin: 0;
+    }
+
+    #abouttext #about_text img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 16px;
+    }
+
+    #abouttext #about_text #credit {
+        position: static;
+        margin-top: 16px;
+        font-size: 16px;
+        text-align: right;
+    }
+
+    #abouttext p {
+        margin: 0;
+        margin-top: 16px;
+        text-align: right;
+        font-size: 24px;
+    }
 }
