@@ -35,4 +35,5 @@ collections:
       - { label: "Layout", name: "layout", widget: "string", default: "post" }
       - { label: "Categories", name: "categories", widget: "string", default: "about" }
       - { label: "Title", name: "title", widget: "string", required: false }
+      - { label: "Images", name: "images", widget: "image", required: false}
       - { label: "Body", name: "body", widget: "markdown" }
