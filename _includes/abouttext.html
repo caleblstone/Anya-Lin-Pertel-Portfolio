@@ -1,8 +1,12 @@
 <div id="abouttext">
 
     <div id="about_text">
-        {{ site.categories.about[0].body }}
-    
+        <p>
+        {% for post in site.categories.about %}
+            {{ post.content }}
+        {% endfor %}
+
+    </p>
         <img src="https://format.creatorcdn.com/c47cde98-f401-4f64-a5c9-ddfa2a95e13a/0/0/0/0,427,3643,1832,2280,880/0-0-0/7bbe0ee4-d18a-48a7-9334-0e3ce33ab50f/1/2/IMG_2075.jpg?fjkss=exp=2060177501~hmac=2ea6dc43d384137fee75fb9ac5931b89174cb29ffa4e360d8743328b51f74998" alt="">
    
         <p id="credit">Website designed and built by <a href="https://bycalebstone.com/">Caleb Stone</a></p>

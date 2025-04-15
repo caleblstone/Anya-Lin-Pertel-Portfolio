@@ -40,6 +40,11 @@ h1{
         font-style: normal;
         margin-top: 8px;
     }
+
+    #about{
+        display: none;
+    }
+
     li:hover{
         color: green;
         cursor: pointer;
@@ -86,7 +91,7 @@ div.work{
     div.image_container{
         width: 60vw;
         max-height: 80vh;
-        display: flex; /* Use flexbox to center the image */
+        display: flex; 
         justify-content: left;
         align-items: center;
         overflow: hidden;
@@ -120,9 +125,7 @@ div.work{
 
     }
 
-    div.image_containter{
-
-    }
+   
 }
 
 #abouttext{
@@ -162,4 +165,144 @@ div.work{
         margin: 0px;
         margin-top: 16px;
     }
+}
+
+@media (max-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column grid */
+    }
+
+    div.work_box {
+        width: 100%; /* Ensure the work_box spans the full width */
+    }
+
+    div.work {
+        display: flex; /* Use flexbox for easier child ordering */
+        flex-direction: column-reverse; /* Reverse the order of children */
+        width: 100%; /* Ensure div.work spans the full width */
+        margin: 8px 0; /* Remove side margins to allow full-width children */
+        height: min-content;
+        align-items: center;
+    }
+
+    div.work div.image_container {
+        width: calc(100% - 16px); /* Full width with 16px margins */
+        margin: 0 auto; /* Center the container */
+        display: flex;
+        justify-content: center;
+    }
+
+    div.work div.image_container img {
+        width: 100%; /* Full width */
+        height: auto; /* Maintain aspect ratio */
+        display: block;
+    }
+
+    
+        #navigation {
+            position: sticky; /* Make it sticky */
+            top: 0; /* Stick to the top of the page */
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two-column grid */
+            align-items: center; /* Vertically center content */
+            background-color: white; /* Optional: Add a background color */
+            z-index: 1000; /* Ensure it stays above other elements */
+            padding: 8px;
+            margin: 0px;
+           
+        }
+    
+        #Title h1 {
+            font-size: 16px; /* Shrink font size to a multiple of 8 */
+            margin: 0; /* Remove default margin */
+        }
+    
+        #Title {
+            grid-column: 1; /* Place in the first column */
+            justify-self: start; /* Align to the left */
+        }
+    
+        #navigation #nav_links {
+            grid-column: 2; /* Place in the second column */
+            display: grid; /* Use CSS Grid */
+            grid-template-columns: auto auto; /* Two-column grid */
+            grid-auto-flow: column; /* Ensure items flow horizontally */
+            justify-content: end; /* Align items to the right */
+            align-items: center; /* Vertically center the <nav> tags */
+            gap: 16px; /* Add spacing between links */
+        }
+    
+        #navigation #nav_links nav {
+            font-size: 16px; /* Adjust font size for smaller screens */
+            margin: 0; /* Remove any default margins */
+            padding: 0; /* Remove any default padding */
+        }
+    
+        #instagram,
+        #email {
+            display: none; /* Hide Instagram and Email links */
+        }
+    
+        #work-list {
+            position: absolute; /* Ensure dropdown doesn't affect layout */
+            top: 100%; /* Position below the navigation */
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.8); /* Match navigation background */
+            backdrop-filter: blur(8px);
+            display: none; /* Keep it hidden by default */
+            z-index: 1000; /* Ensure it stays above other elements */
+            margin: 0px;
+        
+        }
+    
+        #work-list li {
+            text-align: left; /* Align dropdown items to the left */
+            padding: 8px 16px; /* Add padding for better spacing */
+        }
+    
+        #work-list li a {
+            font-size: 16px; /* Adjust font size for smaller screens */
+            text-decoration: none; /* Remove underline */
+            color: black; /* Set link color */
+        }
+        /* Mobile-friendly #abouttext */
+        #abouttext {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            align-items: flex-end; /* Right-align content */
+            font-size: 16px; /* Set font size to 16px */
+            padding: 0px; /* Add padding for spacing */
+        }
+    
+        #abouttext #about_text {
+            width: 90%; /* Make it take up most of the screen width */
+            text-align: right; /* Right-align text */
+            min-width: unset; /* Remove minimum width */
+            max-width: unset; /* Remove maximum width */
+            margin: 0; /* Remove auto-centering */
+        }
+    
+        #abouttext #about_text img {
+            width: 100%; /* Full width */
+            max-width: 100%; /* Ensure it doesn't exceed the container */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 16px; /* Add spacing above the image */
+        }
+    
+        #abouttext #about_text #credit {
+            position: static; /* Remove absolute positioning */
+            margin-top: 16px; /* Add spacing above the credit */
+            font-size: 16px; /* Set font size to 16px */
+            text-align: right; /* Right-align the credit */
+        }
+    
+        #abouttext p {
+            margin: 0;
+            margin-top: 16px;
+            text-align: right; /* Right-align paragraphs */
+            font-size: 24px;
+        }
+    
 }
