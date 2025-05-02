@@ -15,14 +15,14 @@ a {
 
 h1 {
     font-family: "neue-haas-grotesk-display", sans-serif;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 400;
     font-style: normal;
     margin: 0;
 }
 
 #navigation {
-    margin: 16px;
+    margin: 32px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
@@ -59,12 +59,16 @@ h1 {
     }
 
     nav {
-        margin-top: 8px;
+        margin-top: 16px;
+        margin-bottom: 8px;
         font-family: "neue-haas-grotesk-display", sans-serif;
         font-size: 16px;
         font-weight: 400;
         font-style: normal;
         height: min-content;
+    }
+    #nav_links{
+        margin-top: 16px;
     }
 }
 
@@ -105,6 +109,7 @@ div.work {
         grid-template-columns: 1fr;
         align-content: end;
         margin-right: 8px;
+        
 
         div.description_text {
             width: 100%;
@@ -113,12 +118,46 @@ div.work {
             font-weight: 400;
             margin: 0;
             text-align: right;
+            width: 10vw;
+            word-wrap: break-word; // Ensures long words break to the next line
+            overflow-wrap: break-word; // Modern equivalent for word wrapping
         }
     }
+
+    
+}
+
+#pet_portrait_blurb{
+    display: grid;
+    grid-template-columns: auto auto ;
+   justify-self: center;
+   margin-top: 24px;
+   margin-left: 8px;
+   margin-right: 8px;
+   display: none;
+   
+   
+   p{
+        font-size: 20px;
+   }
+   div.description_text{
+    width: 10vw;
+   }
+
+   #pet_portrait_text{
+    width: 60vw;
+ 
+   }
 }
 
 #abouttext {
     display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    height: 100vh;
+    overflow-y: scroll;
+    // // justify-content: center;
+    // align-items: center;
 
     #about_text {
         margin-left: auto;
@@ -150,8 +189,9 @@ div.work {
             }
         }
     }
+    
 
-    font-size: 24px;
+    font-size: 20px;
 
     p {
         margin: 0;
@@ -163,7 +203,51 @@ div.work {
     }
 }
 
+#cvtextbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+    height: 100vh;
+    overflow-y: scroll;
+    #cvtext {
+       width: 40vw;
+        #about_text {
+            margin-left: auto;
+            padding-right: 16px;
+            width: 30vw;
+            text-align: right;
+            min-width: 400px;
+            max-width: 700px;
+        }
+    }
+}
+
+
 @media (max-width: 1024px) {
+
+
+    #cvtextbox{
+        #cvtext {
+            width: 80vw;
+        }
+    }
+
+    #pet_portrait_blurb{
+        display: flex;
+        display: none;
+       
+       div.description_text{
+        width: auto;
+       }
+    
+       #pet_portrait_text{
+        width: 60vw;
+        margin-left: 8px;
+        margin-right: 8px;
+       }
+    }
+
     body {
         display: grid;
         grid-template-columns: 1fr;
@@ -247,6 +331,7 @@ div.work {
         justify-content: end;
         align-items: center;
         gap: 16px;
+        margin-top: 0px;
     }
 
     #navigation #nav_links nav {
@@ -320,12 +405,27 @@ div.work {
         margin: 0;
         margin-top: 16px;
         text-align: right;
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
 
 @media (max-width: 768px) {
+
+    #cvtextbox{
+        margin-left: 8px;
+        margin-right: 8px;
+        #cvtext {
+            width: auto;
+        }
+    }
+
+    #pet_portrait_blurb{
+       #pet_portrait_text{
+        width: auto;
+       }
+    }
+
     body {
         display: grid;
         grid-template-columns: 1fr;
@@ -391,7 +491,7 @@ div.work {
     }
 
     #Title h1 {
-        font-size: 16px;
+        font-size: 20px;
         margin: 0;
     }
 
@@ -417,7 +517,8 @@ div.work {
     }
 
     #instagram,
-    #email {
+    #email,
+    #cv {
         display: none;
     }
 
@@ -481,6 +582,6 @@ div.work {
         margin: 0;
         margin-top: 16px;
         text-align: right;
-        font-size: 24px;
+        font-size: 20px;
     }
 }

@@ -37,3 +37,31 @@ collections:
       - { label: "Title", name: "title", widget: "string", required: false }
       - { label: "Images", name: "images", widget: "image", required: false}
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "pet_portrait_text"
+    label: "Pet Portrait Text" 
+    folder: "_posts/pet_portrait_text"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "string", default: "post" }
+      - { label: "Categories", name: "categories", widget: "string", default: "pet_portrait_text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "landing_page"
+    label: "Landing Page" 
+    folder: "_posts/landing_page"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "string", default: "post" }
+      - { label: "Categories", name: "categories", widget: "string", default: "landing_page" }
+      - { label: "Images", name: "images", widget: "image", required: true}
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "cv"
+    label: "CV" 
+    folder: "_posts/cv"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "string", default: "post" }
+      - { label: "Categories", name: "categories", widget: "string", default: "cv" }
+      - { label: "Body", name: "body", widget: "markdown" }

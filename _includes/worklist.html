@@ -1,5 +1,14 @@
 {% for category in site.categories %}
   <div class="work_box" id="_{{ category[0] }}">
+    
+    <div class="work" id="pet_portrait_blurb"> 
+      <div class="description_text"></div>
+      <div class="image_containter" id="pet_portrait_text">{% for post in site.categories.pet_portrait_text %}
+        <p>{{ post.content }}</p>
+        {% endfor %}</div>
+      
+    </div>
+    
     {% for post in category[1] %}
       <div class="work">
         <div class="work_text">

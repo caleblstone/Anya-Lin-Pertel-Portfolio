@@ -1,0 +1,12 @@
+<div id="cvtextbox">
+
+    <div id="cvtext">
+        <p>
+        {% for post in site.categories.cv %}
+            {{ post.content }}
+        {% endfor %}
+        </p>
+    </div>
+
+
+</div>
