@@ -26,6 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
         highlightSelected(targetId);
     };
 
+    function toggleWork() {
+        const workList = document.getElementById('work-list');
+        const workArrow = document.getElementById('work-arrow');
+        const isHidden = workList.style.display === 'none';
+    
+        // Toggle the display of the work list
+        workList.style.display = isHidden ? 'block' : 'none';
+    
+        // Rotate the arrow
+        workArrow.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+
     // Function to highlight the currently selected <li>
     const highlightSelected = (targetId) => {
         const allListItems = document.querySelectorAll("#work-list li");

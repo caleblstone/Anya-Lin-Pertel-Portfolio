@@ -5,7 +5,7 @@
     
     <div id="nav_links">
         <nav>
-            <a id="work-nav" onclick="toggleWork()">work</a>
+            <a id="work-nav" onclick="toggleWork()">work <span id="work-arrow">▼</span></a>
             
             <ul id="work-list" style="display: none;">
                 {% for category in site.categories %}
@@ -25,9 +25,13 @@
 </div>
 
 <script>
-    function toggleWork() {
-        const workList = document.getElementById('work-list');
-        const isHidden = workList.style.display === 'none';
-        workList.style.display = isHidden ? 'block' : 'none';
-    }
+   function toggleWork() {
+    const workList = document.getElementById('work-list');
+    const workArrow = document.getElementById('work-arrow');
+    const isHidden = workList.style.display === 'none';
+
+    // Toggle the display of the work list
+    workList.style.display = isHidden ? 'block' : 'none';
+
+}
 </script>
