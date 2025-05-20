@@ -7,7 +7,7 @@ media_folder: "images"
 media_library:
   name: uploadcare
   config:
-    publicKey: fbb66349001efbc7e5ce
+    publicKey: 3debd9c2baceaef3585d
     multiple: true
   settings:
     defaultOperations: '/resize/2400/-/quality/lightest/-/format/auto/'
