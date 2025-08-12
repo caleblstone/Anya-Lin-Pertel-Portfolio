@@ -5,5 +5,5 @@ title: 103 Bad Paintings (Installation View)
 year: "2022"
 materials: Acrylic on canvas and paper, studio objects
 images:
-  - https://e8eflx6kdm.ucarecd.net/2d502b40-f3bb-4799-81f6-628aaaeeb4d0/-/resize/2400/-/quality/lightest/-/format/auto/
+  - https://e8eflx6kdm.ucarecd.net/ae88b9f4-d7cb-4024-908d-8588f0f6d20f/-/resize/2400/-/quality/lightest/-/format/auto/
 ---
