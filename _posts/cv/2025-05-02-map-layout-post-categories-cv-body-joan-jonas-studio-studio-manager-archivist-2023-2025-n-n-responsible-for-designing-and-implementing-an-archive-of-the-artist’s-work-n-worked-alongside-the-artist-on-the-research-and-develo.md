@@ -12,7 +12,7 @@ EDUCATION
 
 2022	B.A. Studio Art and Humanities, Yale University, New Haven, CT
 
-			*Magna cum laude,* Honors in Studio Art
+*Magna cum laude,* Honors in Studio Art
 
 2018	University of California-Los Angeles, Summer Course, Los Angeles, CA
 
