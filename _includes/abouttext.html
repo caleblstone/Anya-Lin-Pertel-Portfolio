@@ -2,11 +2,13 @@
 
     <div id="about_text">
         <p>
-        {% for post in site.categories.about %}
+        {% for post in site.about %}
             {{ post.content }}
+
+           
         {% endfor %}
         </p>
-
+        
         <p class="mobileContact">anya.l.pertel@gmail.com</p>
         <p class="mobileContact"><a href="https://www.instagram.com/anya__mind/">Instagram</a></p>
         <p class="mobileContact"><a href="/cv/index.html">CV</a></p>

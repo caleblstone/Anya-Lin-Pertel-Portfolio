@@ -9,7 +9,8 @@
       
     </div>
     
-    {% for post in category[1] %}
+    {% assign posts_sorted = category[1] | sort: "order" | reverse %}
+    {% for post in posts_sorted %}
       <div class="work">
         <div class="work_text">
           <div class="description_text"><em>{{ post.title }}</em></div>
