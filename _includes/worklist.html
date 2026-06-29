@@ -19,7 +19,7 @@
           <div class="description_text">{{ post.dimensions }}</div>
         </div>
         <div class="image_container">
-          <img src="{{ post.images }}" alt="">
+          <img src="{{ post.images }}" alt="{{ post.title }}" loading="lazy" decoding="async">
         </div>
       </div>
     {% endfor %}
