@@ -5,5 +5,6 @@ title: Loud Mouths III
 year: "2024"
 materials: Oil on canvas
 dimensions: 11x14"
-images: /images/8c514d7f-bdc0-47f0-b99b-56e35c4932a3.jpg
+order: 6
+images: /images/anya.01.2026_10.jpg
 ---
