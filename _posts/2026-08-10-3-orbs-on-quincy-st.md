@@ -1,6 +1,6 @@
 ---
 layout: work
-categories: "2025"
+categories: "2026"
 title: 3 Orbs on Quincy St.
 year: "2026"
 materials: Oil on canvas
